@@ -18,6 +18,7 @@
         <td><%= book.name %></td>
         <td><%= book.author %></td>
         <td><%= book.image %></td>
+        <td><%= rating_for book, 'rating', disable_after_rate: true %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

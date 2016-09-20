@@ -15,5 +15,10 @@
   <%= image_tag @book.image.thumb.url %>
 </p>
 
+<p>
+  <strong>Rating:</strong>
+  <%= rating_for @book, 'rating', disable_after_rate: true %>
+</p>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

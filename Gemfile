@@ -24,6 +24,9 @@ gem 'mini_magick', '~> 4.3'
 gem 'materialize-sass'
 # Use devise for user authentication
 gem 'devise'
+
+gem 'ratyrate'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

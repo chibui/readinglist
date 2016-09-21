@@ -22,8 +22,16 @@ class BooksController < ApplicationController
 
   # GET /books/new
   def new
-    @book = Book.new
+    if user_signed_in?
+      @book = Book.new
+    else
+      respond_to do |format|
+        format.html { redirect_to "/users/sign_in", notice: 'Please sign in'}
+        format.json { render :show, status: :created, location: @user }
+      end
+    end
   end
+
 
   # GET /books/1/edit
   def edit
@@ -33,7 +41,6 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
-
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }

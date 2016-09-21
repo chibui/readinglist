@@ -20,5 +20,10 @@
   <%= rating_for @book, 'rating', disable_after_rate: true %>
 </p>
 
+<% if current_user.try(:admin?) %>
+
 <%= link_to 'Edit', edit_book_path(@book) %> |
+
+<% else %>
+<% end %>
 <%= link_to 'Back', books_path %>

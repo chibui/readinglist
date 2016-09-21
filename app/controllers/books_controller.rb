@@ -1,8 +1,17 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :require_permission, only: [:edit, :update, :destroy]
 
   # GET /books
   # GET /books.json
+
+  def require_permission
+    if current_user.admin?
+    else
+      redirect_to root_path
+    end
+  end
+
   def index
     @books = Book.all.reverse
   end

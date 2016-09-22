@@ -1,7 +1,9 @@
 # README
 
 https://trello.com/b/seEzFa2V/reading-list
+
 https://gertyslist.herokuapp.com/
+
 https://drive.google.com/file/d/0Bzbm-cNaymvCN1BScnlxOHNONWs/view?usp=sharing
 
 This README would normally document whatever steps are necessary to get the
